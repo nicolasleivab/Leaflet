@@ -13,5 +13,15 @@ version: '1.1.0'
 });
 map.addLayer(Layer_name); 
 
+var basemaps = {   //basemap and overlay layers
+"<img src='images/osm.png'/> OSM": osm
+};
+var overlay_layers = {
+"Title": Layer_name,
+"Title 2": Layer_name2,
+//...
+};
+L.control.layers(basemaps, overlay_layers).addTo(map);  //adding layer switcher
+
 
 
